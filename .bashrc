@@ -1,5 +1,5 @@
 # .bashrc an alias and function to parse the cd_on_exit directory from TUIFIManager
-# usage: in shell (-session) source this file if not loaded by the bash environment then execute 'tuify' && CD_dir=$(pytuifn) && cd $CD_dir
+# usage: in shell (-session) source this file if not loaded by the bash environment then execute 'tuify'
 alias tuify2='function _tui(){
    og_dir=$(pwd)
    exec 5>&1;
