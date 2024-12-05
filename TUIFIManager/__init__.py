@@ -642,11 +642,11 @@ class TUIFIManager(WindowPad, Cd):  # TODO: I need to create a TUIWindowManager 
         unicurses.endwin()
        """
        unicurses.endwin()
-       """
-        self.__handle_garbage()
-       """
+
        print("")
        print("//\nCD\n"+""+os.getcwd()+"")
+#       note is below is commented, above will need another special sequence of // appended in the above print(..) 
+#       self.__handle_garbage()
        exit()
 
 
