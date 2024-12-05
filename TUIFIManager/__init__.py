@@ -634,12 +634,20 @@ class TUIFIManager(WindowPad, Cd):  # TODO: I need to create a TUIWindowManager 
 
 
     def exit_to_self_directory(self):
-        if not IS_WINDOWS and not self.directory == INIT_DIRECTORY:
+       import os
+       """ 
+       if not IS_WINDOWS and not self.directory == INIT_DIRECTORY:
             self.cd(self.directory)
         print(END_MOUSE)
         unicurses.endwin()
+       """
+       unicurses.endwin()
+       """
         self.__handle_garbage()
-        exit()
+       """
+       print("")
+       print("//\nCD\n"+""+os.getcwd()+"")
+       exit()
 
 
     def load_order(self, path=CONFIG_PATH):
