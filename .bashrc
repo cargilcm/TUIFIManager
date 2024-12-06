@@ -7,7 +7,7 @@ alias tuify='function _tui(){
    tt=$(tuifi | tee /dev/fd/5);
    echo "$tt" > tuiout && export CD_dir="$(pytuifn)";
    rm tuiout;
-   cd $CD_dir;
+   cd "$CD_dir";
    };_tui;'
 
 function pytuifn(){
