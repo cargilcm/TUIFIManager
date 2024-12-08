@@ -7,9 +7,20 @@ alias tuify='function _tui(){
    tt=$(tuifi | tee /dev/fd/5);
    echo "$tt" > tuiout && export CD_dir="$(pytuifn)";
    rm tuiout;
-   cd "$CD_dir";
+   if [[ "$(tcd)" == "CD" ]]; then
+      cd "$CD_dir";
+   fi
    };_tui;'
 
 function pytuifn(){
   (python -c 'with open("./tuiout", "r") as file: t=file.read();print(t[t.index("//")+6:len(t)])');
 }
+function tcd(){
+  # if [[ "$tt" =~ "CD" ]];
+   if [[ "$tt" =~ "//"$'\n'"CD" ]];
+      then echo "CD";
+   else
+      echo  "a file was selected instead of change dir being set";
+   fi
+}
+
