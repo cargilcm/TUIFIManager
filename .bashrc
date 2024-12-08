@@ -19,8 +19,6 @@ function tcd(){
   # if [[ "$tt" =~ "CD" ]];
    if [[ "$tt" =~ "//"$'\n'"CD" ]];
       then echo "CD";
-   else
-      echo  "a file was selected instead of change dir being set";
    fi
 }
 
